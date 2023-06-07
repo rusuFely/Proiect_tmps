@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Gestionare Magazin Alimentar</h1>
+
+    <div class="product-form">
+        <h2>Adaugă produs</h2>
+        <input type="text" id="name" placeholder="Nume">
+        <input type="number" id="price" placeholder="Preț">
+        <input type="number" id="quantity" placeholder="Cantitate">
+        <button onclick="addProduct()">Adaugă</button>
+    </div>
+
+    <div class="product-list">
+        <h2>Produse</h2>
+        <ul id="products"></ul>
+    </div>
+
+    <div class="cart">
+        <h2>Coș de cumpărături</h2>
+        <ul id="cart"></ul>
+        <p id="total"></p>
+        <div class="payment-options">
+            <input type="radio" id="card" name="payment" value="card" checked>
+            <label for="card">Card bancar</label>
+            <input type="radio" id="cash" name="payment" value="cash">
+            <label for="cash">Numerar</label>
+        </div>
+        <button onclick="checkout()">Finalizează comanda</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
